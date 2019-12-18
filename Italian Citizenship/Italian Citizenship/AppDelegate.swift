@@ -22,7 +22,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         coordinator = MainCoordinator(navigationController: navController)
 
         // tell the coordinator to take over control
-        coordinator?.start(firstTime: true)
+        coordinator?.start(firstTime: isFirstLaunch())
 
         // create a basic UIWindow and activate it
         window = UIWindow(frame: UIScreen.main.bounds)
